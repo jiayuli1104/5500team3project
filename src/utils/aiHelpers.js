@@ -3,8 +3,7 @@ const statusScore = { Todo: 2, "In Progress": 1, Done: 0 };
 
 export function extractTasksFromText(text) {
   return text
-    .split(/
-|\.|;/)
+    .split(/\n|\.|;/)
     .map((line) => line.trim())
     .filter(Boolean)
     .filter((line) => line.length > 4)
